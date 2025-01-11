@@ -1298,6 +1298,86 @@ const sitesData = [
       { month: 'Apr', actual: 45, predicted: 40, target: 100 },
     ],
   },
+
+    {
+    "id": 2,
+    "name": "Mayo Clinic Research Center",
+    "location": "Rochester, MN",
+    "status": "Active",
+    "enrolled": 48,
+    "active":45,
+    "dropout":2,
+    "capacity": 55,
+    "startDate": "2025-01-01",
+    "expectedEndDate": "2025-12-31",
+    "principalInvestigator": "Dr. John Smith",
+    "contact": {
+        "coordinatorName": "Rachel Green",
+        "coordinatorPhone": "(507) 555-0198",
+        "coordinatorEmail": "r.green@mayo.edu",
+        "address": "200 1st Street SW, Rochester, MN 55905"
+    },
+    "metrics": {
+        "retentionRate": 88,
+        "screeningRate": 78,
+        "protocolAdherence": 95,
+        "dataQualityScore": 90
+    },
+    "regulatory": {
+        "irbRenewalDue": "2025-11-15",
+        "lastAuditDate": "2024-10-10",
+        "auditFindings": 1,
+        "gcpExpiration": "2025-07-31"
+    },
+    "safety": {
+        "adverseEvents": 3,
+        "seriousAdverseEvents": 1,
+        "protocolDeviations": {
+            "total": 2,
+            "major": 1,
+            "minor": 1
+        }
+    },
+    "demographics": {
+        "ageGroups": [
+            { "name": "18-30", "value": 12 },
+            { "name": "31-45", "value": 18 },
+            { "name": "46-60", "value": 10 },
+            { "name": "60+", "value": 8 }
+        ],
+        "gender": [
+            { "name": "Male", "value": 26 },
+            { "name": "Female", "value": 22 }
+        ]
+    },
+    "monthlyEnrollment": [
+        { "month": "Jan", "enrolled": 18, "target": 15 },
+        { "month": "Feb", "enrolled": 12, "target": 15 },
+        { "month": "Mar", "enrolled": 10, "target": 15 },
+        { "month": "Apr", "enrolled": 8, "target": 15 },
+        { "month": "May", "enrolled": 0, "target": 15 }
+    ],
+    "patientStatusDistribution": [
+        { "name": "Active", "value": 46 },
+        { "name": "Completed", "value": 2 },
+        { "name": "Discontinued", "value": 4 },
+        { "name": "Failed Screening", "value": 22 }
+    ],
+    "patientVisits": [
+        { "visit": "Screening", "patients": 85 },
+        { "visit": "Visit 1", "patients": 65 },
+        { "visit": "Visit 2", "patients": 50 },
+        { "visit": "Visit 3", "patients": 40 },
+        { "visit": "Visit 4", "patients": 25 },
+        { "visit": "End of Study", "patients": 15 }
+    ],
+    "predictionAnalysis": [
+        { "month": "Jan", "actual": 20, "predicted": 18, "target": 25 },
+        { "month": "Feb", "actual": 30, "predicted": 25, "target": 50 },
+        { "month": "Mar", "actual": 40, "predicted": 35, "target": 75 },
+        { "month": "Apr", "actual": 45, "predicted": 40, "target": 100 }
+    ]
+  }
 ];
 
 const SiteDetailView = () => {

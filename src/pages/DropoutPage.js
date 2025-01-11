@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import {
   ResponsiveContainer,
   ComposedChart,
@@ -165,6 +166,8 @@ trends: [
 
 const DropoutPage = () => {
   const [selectedRiskPatient, setSelectedRiskPatient] = useState(null);
+  const { id } = useParams(); // Extract trial ID from the URL
+  const navigate = useNavigate();
 
   return (
     <div className="p-8 bg-gray-50">
@@ -208,17 +211,21 @@ const DropoutPage = () => {
             <p className="text-sm text-gray-500 mt-1">Ready for Enrollment</p>
           </div>
 
-          {/* At Risk */}
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <div className="flex justify-between items-start">
-              <div>
+          <div
+            className="bg-white p-6 rounded-lg shadow-md flex justify-between items-center cursor-pointer hover:shadow-lg transition-shadow"
+            onClick={() => navigate('/risk-analysis')} // Navigate to the Risk Analysis page
+            aria-label="View Risk Analysis"
+            >
+            <div>
                 <p className="text-sm text-red-600">At Risk Patients</p>
                 <p className="text-2xl font-bold">{studyData.riskPatients.length}</p>
-              </div>
-              <span className="text-red-500"><AlertTriangle size={24} /></span>
+                <p className="text-sm text-gray-500 mt-1">Requiring Attention</p>
             </div>
-            <p className="text-sm text-gray-500 mt-1">Requiring Attention</p>
+            <span className="text-red-500">
+                <AlertTriangle size={32} />
+            </span>
           </div>
+
         </div>
 
         {/* Dropout Analysis */}

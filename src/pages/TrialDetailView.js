@@ -596,7 +596,11 @@ const TrialDetailView = () => {
 
       {/* Key Metrics Section */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-6 mb-8">
-        <div className="bg-white shadow rounded-lg p-6 border">
+        <div
+          className="bg-white shadow rounded-lg p-6 border cursor-pointer hover:shadow-lg transition-shadow"
+          onClick={() => navigate(`/participants/${trial.id}`)} // Navigate to a participants page with the trial ID
+          aria-label="View Participants"
+        >
           <Users className="w-5 h-5 text-blue-600 mb-2" />
           <p className="text-gray-600 text-sm">Participants</p>
           <h2 className="text-xl md:text-2xl font-bold">{trial.participants}</h2>
@@ -621,8 +625,8 @@ const TrialDetailView = () => {
         <div className="bg-white shadow rounded-lg p-6 border">
           <Clock className="w-5 h-5 text-yellow-600 mb-2" />
           <p className="text-gray-600 text-sm">Time Remaining</p>
-          <h2 className="text-xl md:text-2xl font-bold">128 days</h2>
-          <p className="text-gray-600 text-sm">Ends Sep 2025</p>
+          <h2 className="text-xl md:text-2xl font-bold">365 days</h2>
+          <p className="text-gray-600 text-sm">Ends Jan 2026</p>
         </div>
       </div>
 
@@ -672,7 +676,7 @@ const TrialDetailView = () => {
           <h3 className="text-lg font-bold mb-4">Study Endpoints</h3>
           <p className="font-medium">Primary Endpoint</p>
           <p className="text-sm text-gray-600">
-            Reduction in cardiovascular events over 24 months
+            Reduction in cardiovascular events over 12 months
           </p>
           <p className="font-medium mt-4">Secondary Endpoints</p>
           <ul className="text-sm text-gray-600 list-disc ml-5">

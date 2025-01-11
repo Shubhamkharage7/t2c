@@ -301,16 +301,17 @@ const Footer = () => (
       <div>
         <h4 className="mb-4 text-lg font-semibold">Contact</h4>
         <ul className="space-y-2 text-neutral text-sm md:text-base">
-          <li>contact@clinicalai.com</li>
-          <li>+1 (555) 234-5678</li>
-          <li>Boston, MA</li>
+          <li>contact@trial2cure.com</li>
+          {/* <li>+1 (555) 234-5678</li> */}
+          <li>440 N. Wolfe Rd, Sunnyvale,
+          CA 94085, United States</li>
         </ul>
       </div>
     </div>
 
     {/* Bottom Section */}
     <div className="mt-12 pt-8 border-t border-gray-800 text-center text-neutral text-sm md:text-base">
-      © 2025 ClinicalAI. All rights reserved.
+      © 2025 Peearz Corp. All rights reserved.
     </div>
   </footer>
 );

@@ -114,6 +114,8 @@ import TrialDetailView from './pages/TrialDetailView';
 import SitesDashboard from './pages/SitesDashboard';
 import SitesDetailView from './pages/SitesDetailView';
 import DropoutPage from './pages/DropoutPage';
+import ParticipantsPage from './pages/ParticipantsPage';
+import RiskAnalysis from './pages/RiskAnalysis'
 
 const App = () => {
   return (
@@ -127,7 +129,9 @@ const App = () => {
             <Route path="/trial/:id" element={<TrialDetailView />} />
             <Route path="/sites" element={<SitesDashboard />} />
             <Route path="/sites/:id" element={<SitesDetailView />} />
-            <Route path="/sites/:id/dropout" element={<DropoutPage />} />
+            <Route path="/sites/:id/dropout" element={<DropoutPage />} />           
+            <Route path="/participants/:id" element={<ParticipantsPage />} /> 
+            <Route path="/risk-analysis" element={<RiskAnalysis />} />
             <Route
               path="*"
               element={<div className="p-8">404 - Page Not Found</div>}
